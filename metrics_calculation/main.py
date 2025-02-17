@@ -111,14 +111,20 @@ def evaluate_dataset_part(path, save_dir):
     """
     dataset_part_name = path.split("/")[-1].split(".npy")[0]
     result_path = os.path.join(save_dir, f"{dataset_part_name}.json")
+    result_shape_path = os.path.join(save_dir, f"{dataset_part_name}_shape.npy")
 
-    if os.path.exists(result_path):
-        print(f"{dataset_part_name} already exists.")
+    if os.path.exists(result_path) and os.path.exists(result_shape_path):
+        print(f"{dataset_part_name} and its shape already exist.")
         return
 
     # load data
     data = np.load(path).astype(np.float32)
     n, c, l = data.shape
+    if not os.path.exists(result_shape_path):
+        np.save(result_shape_path, np.array([n, c, l]))
+    if os.path.exists(result_path):
+        print(f"{result_path} already exists.")
+        return
     delayed_tasks = []
     for node_id in range(n):
         for channel in range(c):
