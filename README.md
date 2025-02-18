@@ -6,7 +6,7 @@
 
 ---
 
-This repository contains the code to generate the BLAST corpus. The folders `raw_data_construction`, `metrics_calculation`, `feature_construction`, `dimension_reduction`, and `sampling` correspond to the sections shown in the diagram above. The raw BLAST data contains 321 billion observations, approximately 3.4TB in size. After sampling, BLAST includes 3 million time series, each with a maximum length of 4096, and is approximately 2.7GB in size. These data will be open-sourced on HuggingFace after the review process is complete.
+This repository contains the code to generate the BLAST corpus. The folders `raw_data_construction`, `metrics_calculation`, `feature_construction`, `dimension_reduction`, and `sampling` correspond to the sections shown in the diagram above. The raw BLAST data contains 321 billion observations, approximately 3.4TB in size. After sampling, BLAST includes 3 million time series, each with a maximum length of 4096, and is approximately 227GB in size. These data will be open-sourced on HuggingFace after the review process.
 
 ## 💿 Requirements
 
