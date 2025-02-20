@@ -6,7 +6,7 @@
 
 ---
 
-This repository contains the code to generate the BLAST corpus. The folders `raw_data_construction`, `metrics_calculation`, `feature_construction`, `dimension_reduction`, and `sampling` correspond to the sections shown in the diagram above. The raw BLAST data contains 321 billion observations, approximately 3.4TB in size. After sampling, BLAST includes 3 million time series, each with a maximum length of 4096, and is approximately 227GB in size. These data will be open-sourced on HuggingFace after the review process.
+This repository contains the code to generate the BLAST corpus. The folders `raw_data_construction`, `metrics_calculation`, `feature_construction`, `dimension_reduction`, and `sampling` correspond to the sections shown in the diagram above. The raw BLAST data contains 321 billion observations, approximately 3.4TB in size. After sampling, BLAST includes 3 million time series, each with a maximum length of 4096, and is approximately 227GB in size. These data will be open-sourced on HuggingFace after the review process. `TimeMoE_BLAST` contains the code to train the TimeMoE model on the BLAST corpus.
 
 ## 💿 Requirements
 
@@ -58,6 +58,10 @@ python sampling/data_sampler.py
 python sampling/mixup.py
 ```
 
+### 5. Train TimeMoE
+```bash
+cd TimeMoE_BLAST
+
+
 ## TODO
 - [ ] Clean up the code and add comments.
-- [ ] Add scripts for training TimeMoE on BLAST.
