@@ -4,7 +4,7 @@ import numexpr as ne
 ne.set_num_threads(64)  # 设置为 64 线程
 
 # 根据__file__获取当前文件的路径，然后取上一级目录
-project_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+project_dir = os.path.abspath("")
 processed_datasets_dir = project_dir + '/datasets/processed_datasets'
 save_dir = project_dir + '/metrics_calculation/output/'
 os.makedirs(save_dir, exist_ok=True)
