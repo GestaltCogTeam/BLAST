@@ -88,9 +88,3 @@ class MOIRAI(nn.Module):
             output = output.median(1).values
         
         return output
-
-
-if __name__ == "__main__":
-    pass
-    model = MOIRAI(prediction_length=16, context_length=64, patch_size="auto", from_pretrained="/workspace/S22/TSFM_LLaMA3/huggingface_ckpts/MOIRAI-1.1-Base")
-    

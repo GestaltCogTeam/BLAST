@@ -16,7 +16,7 @@ from ..loss import fake_loss
 MODEL_ARCH = TimeMoE
 
 MODEL_PARAM = {
-    'model_id': "/workspace/S22/TSFM_LLaMA3/huggingface_ckpts/TimeMoE-200M",
+    'model_id': "/PATH/TO/TimeMoE-200M",
     'from_pretrained': False,
     'context_length': 4095,
     'trust_remote_code': True,
