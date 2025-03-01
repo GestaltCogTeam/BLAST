@@ -17,12 +17,12 @@ import os
 
 project_dir = os.path.abspath("")
 processed_datasets_dir = project_dir + '/datasets/processed_datasets/'
-grid_mapping_dir = project_dir + '/time_series_analysis/grid_mapping/n_100_d_0.9/'
+grid_mapping_dir = project_dir + '/dimension_reduction/output/'
 
 NUM_SAMPLES_ALL = 20_000_000
 NUM_SAMPLES_EACH_DATA_PART = 20_000
 
-save_dir = project_dir + '/time_series_analysis/pretrain_data_padded_normed/' # 不区分长度，直接填充到最大长度
+save_dir = project_dir + '/sampling/output/' # 不区分长度，直接填充到最大长度
 
 # %%
 # 询问是否创建保存文件夹
@@ -124,7 +124,6 @@ with tqdm(total=NUM_SAMPLES_ALL) as pbar:
         # 所有栅格等比例采样
         random_grid = random_grids[current_index]
         random_time_series = random.choice(grid_data_mapping[random_grid])
-        # TODO: 是否需要去重?个人感觉不需要，重复就重复了，说明这一个栅格所对应的数据量在所采样到的数据中不够多，需要配合样本生成或者样本增强等手段。
         sampled_time_series.append(random_time_series)
         sampled_grids.append(random_grid) # grid
         pbar.update(1)
