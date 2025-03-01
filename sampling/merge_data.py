@@ -70,9 +70,3 @@ for i in tqdm(range(max_data_part_number_validation)):
     shape = data_i.shape
     data[current_index:current_index + shape[0]] = data_i
     current_index += shape[0]
-
-
-# %%
-
-
-
