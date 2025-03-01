@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 
 project_dir = os.path.abspath("")
 vector_dir = project_dir + '/feature_construction/output/'
-save_dir = project_dir + '/dimension_reduction/grid_mapping/'
+save_dir = project_dir + '/dimension_reduction/output/'
 save_scaled_reduced_data_dir = save_dir + 'scaled_reduced_data/'
 os.makedirs(save_dir, exist_ok=True)
 os.makedirs(save_scaled_reduced_data_dir, exist_ok=True) # 存储降维之后数据的目录
