@@ -55,6 +55,7 @@ Use Jupyter notebook to run `dimension_reduction/dimension_reduction.ipynb`.
 ### 5. Sampling
 ```bash
 python sampling/data_sampler.py
+python sampling/merge_data.py
 python sampling/mixup.py
 ```
 
