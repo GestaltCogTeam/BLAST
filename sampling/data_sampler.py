@@ -15,7 +15,7 @@
 # %%
 import os
 
-project_dir = "/home/S22/workspace/Datasets"
+project_dir = os.path.abspath("")
 processed_datasets_dir = project_dir + '/datasets/processed_datasets/'
 grid_mapping_dir = project_dir + '/time_series_analysis/grid_mapping/n_100_d_0.9/'
 
