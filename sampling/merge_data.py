@@ -51,6 +51,8 @@ for i in tqdm(range(max_data_part_number_train)):
     data[current_index:current_index + shape[0]] = data_i
     current_index += shape[0]
 
+np.save(f"{save_dir}/train_shape.npy", (num_samples, 4096))
+
 # %%
 # merge validation data
 num_samples = 0
@@ -70,3 +72,5 @@ for i in tqdm(range(max_data_part_number_validation)):
     shape = data_i.shape
     data[current_index:current_index + shape[0]] = data_i
     current_index += shape[0]
+
+np.save(f"{save_dir}/valid_shape.npy", (num_samples, 4096))
