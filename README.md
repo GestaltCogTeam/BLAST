@@ -50,7 +50,10 @@ The results will be saved in the `feature_construction/output/` folder.
 
 ### 4. Dimension Reduction
 
-Use Jupyter notebook to run `dimension_reduction/dimension_reduction.ipynb`.
+First, run `dimension_reduction_train.py` to train the UMAP model.
+
+Then, run `dimension_reduction,py` to reduce the dimensions of the features.
+
 
 ### 5. Sampling
 ```bash

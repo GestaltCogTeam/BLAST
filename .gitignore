@@ -1,5 +1,9 @@
 datasets/
-output/
-output_bk/
+output*/
+output
 distribution/
 grid_mapping/
+scripts/
+*.zip
+*.npy
+*.pdf
