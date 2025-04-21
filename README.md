@@ -56,11 +56,14 @@ Then, run `dimension_reduction,py` to reduce the dimensions of the features.
 
 
 ### 5. Sampling
-```bash
-python sampling/data_sampler.py
-python sampling/merge_data.py
-python sampling/mixup.py
-```
+
+1. run `sampling.py`
+
+2. run `split.py`
+
+3. run `clean_data.ipynb`
+
+The sampled data will be saved in the `sampling/train` and `sampling/valid` folders.
 
 ### 5. Train TimeMoE
 ```bash
