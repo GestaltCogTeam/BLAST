@@ -65,11 +65,6 @@ Then, run `dimension_reduction,py` to reduce the dimensions of the features.
 
 The sampled data will be saved in the `sampling/train` and `sampling/valid` folders.
 
-### 5. Train TimeMoE
-```bash
-cd TimeMoE_BLAST
-python train.py -c baselines/timemoe/config/timemoe_base_x8.py -g '0,1,2,3,4,5,6,7'
-```
 
 ## TODO
 - [ ] Clean up the code and add comments.
