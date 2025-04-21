@@ -57,11 +57,11 @@ Then, run `dimension_reduction,py` to reduce the dimensions of the features.
 
 ### 5. Sampling
 
-1. run `sampling.py`
+1. run `sampling/sampling.py`
 
-2. run `split.py`
+2. run `sampling/split.py`
 
-3. run `clean_data.ipynb`
+3. run `sampling/clean_data.ipynb`
 
 The sampled data will be saved in the `sampling/train` and `sampling/valid` folders.
 
