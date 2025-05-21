@@ -1,0 +1,10 @@
+datasets/
+output*/
+output
+distribution/
+grid_mapping/
+scripts/
+*.zip
+*.npy
+*.pdf
+*.dat
