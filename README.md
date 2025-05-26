@@ -7,9 +7,9 @@
 ---
 
 > [!IMPORTANT]
-> This repository contains the code to *generate* the BLAST corpus. If you are interested in *using* the BLAST corpus to train universal forecasting models, please refer to the [BasicTS](https://github.com/GestaltCogTeam/BasicTS) repository. We will continue to add more baselines to BasicTS.
+> This repository contains the code to ***generate*** the BLAST corpus. If you are interested in ***using*** the BLAST corpus to train universal forecasting models, please refer to the [BasicTS](https://github.com/GestaltCogTeam/BasicTS) repository. It provides native support for BLAST and can be used to train models such as TimeMoE (decoder-only architecture) and ChronosBolt (encoder-decoder architecture).
 
- The folders `raw_data_construction`, `metrics_calculation`, `feature_construction`, `dimension_reduction`, and `sampling` correspond to the sections shown in the diagram above. The raw BLAST data contains 321 billion observations, approximately 3.4TB in size. After sampling, BLAST includes 3 million time series, each with a maximum length of 4096, and is approximately 227GB in size. These data will be open-sourced on HuggingFace after the review process. `TimeMoE_BLAST` contains the code to train the TimeMoE model on the BLAST corpus.
+The folders `raw_data_construction`, `metrics_calculation`, `feature_construction`, `dimension_reduction`, and `sampling` correspond to the sections shown in the diagram above. The raw BLAST data contains 321 billion observations, approximately 3.4TB in size. After sampling, BLAST includes 3 million time series, each with a maximum length of 4096, and is approximately 227GB in size. These data will be open-sourced on HuggingFace after the review process. `TimeMoE_BLAST` contains the code to train the TimeMoE model on the BLAST corpus.
 
 ## 💿 Requirements
 
