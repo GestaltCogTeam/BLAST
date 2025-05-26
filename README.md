@@ -7,7 +7,9 @@
 ---
 
 > [!IMPORTANT]
-> This repository contains the code to ***generate*** the BLAST corpus. If you are interested in ***using*** the BLAST corpus to train universal forecasting models, please refer to the [BasicTS](https://github.com/GestaltCogTeam/BasicTS) repository. It provides native support for BLAST and can be used to train models such as TimeMoE (decoder-only architecture) and ChronosBolt (encoder-decoder architecture).
+> This repository contains the code to ***generate*** the BLAST corpus. 
+> 
+> If you are interested in ***using*** the BLAST corpus to train universal forecasting models, please refer to the [BasicTS](https://github.com/GestaltCogTeam/BasicTS) repository. It provides native support for BLAST and can be used to train models such as TimeMoE (decoder-only architecture) and ChronosBolt (encoder-decoder architecture).
 
 The folders `raw_data_construction`, `metrics_calculation`, `feature_construction`, `dimension_reduction`, and `sampling` correspond to the sections shown in the diagram above. The raw BLAST data contains 321 billion observations, approximately 3.4TB in size. After sampling, BLAST includes 3 million time series, each with a maximum length of 4096, and is approximately 227GB in size. These data will be open-sourced on HuggingFace after the review process. `TimeMoE_BLAST` contains the code to train the TimeMoE model on the BLAST corpus.
 
@@ -21,12 +23,33 @@ pip install -r requirements.txt
 
 ## 📂 Prepare Raw Data
 
-Download the data from HuggingFace and place it in the `datasets/raw_datasets/` folder.
+Download the data from [Chronos](https://github.com/amazon-science/chronos-forecasting), [MOIRAI](https://github.com/SalesforceAIResearch/uni2ts), and [MOMENT](https://github.com/moment-timeseries-foundation-model/moment), and place it in the `datasets/raw_datasets/` folder.
+
+The directory becomes:
+
+```
+datasets/raw_datasets/
+├── chronos_datasets
+│   ├── dominick
+│   └── electricity_15min
+|   └── ...
+├── lotsa_datasets
+│   ├── alibaba_cluster_trace_2018
+│   └── australian_electricity_demand
+│   └── ...
+├── Timeseries-PILE
+│   ├── anomaly_detection
+│   ├── classification
+│   ├── forecasting
+```
+
 
 ## BLAST Workflow
 
 ### 1. Raw Data Construction
-> Read raw data from various sources and save them in a unified format
+
+Read raw data from various sources and save them in a unified format
+
 ```bash
 python raw_data_construction/Chronos_read_and_save.py
 python raw_data_construction/LOTSA_read_and_save.py
@@ -38,6 +61,7 @@ python raw_data_construction/UAD_read_and_save.py
 The processed data will be saved in the `datasets/processed_datasets/` folder.
 
 ### 2. Metrics Calculation
+
 ```bash
 python metrics_calculation/main.py
 ```
@@ -45,6 +69,7 @@ python metrics_calculation/main.py
 The results will be saved in the `metrics_calculation/output/` folder.
 
 ### 3. Feature Construction
+
 ```bash
 python feature_construction/main.py
 ```
